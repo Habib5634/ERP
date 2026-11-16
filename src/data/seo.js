@@ -2,7 +2,9 @@
 
 export const globalKeywords = [
   "Ali Akbar Softech",
+  "ALI AKBAR SOFTECH",
   "A.A.S",
+  "Ali Akbar Softech Pakistan",
   "customized ERP software Pakistan",
   "ERP software Pakistan",
   "hybrid ERP",
@@ -16,11 +18,13 @@ export const globalKeywords = [
 
 export const pageSeo = {
   home: {
-    title:
-      "Customized ERP Software & SaaS Solutions Pakistan | ALI AKBAR SOFTECH",
+    title: "ALI AKBAR SOFTECH | Customized ERP & SaaS Software Pakistan",
     description:
-      "ALI AKBAR SOFTECH builds hybrid customized ERP and SaaS business software for factories, farms, and trading — cloud ERP, FBR/PRA ready, plus accounting & tax consultancy in Pakistan. Led by Usman Akbar.",
+      "ALI AKBAR SOFTECH (A.A.S) — official site. Customized ERP and SaaS business software for factories, farms, and trading in Pakistan, plus accounting & tax consultancy. Led by Usman Akbar.",
     keywords: [
+      "Ali Akbar Softech",
+      "ALI AKBAR SOFTECH",
+      "A.A.S software",
       "ERP software Pakistan",
       "customized ERP software",
       "SaaS ERP Pakistan",
@@ -50,7 +54,7 @@ export const pageSeo = {
       "HRM payroll ERP Pakistan",
       "FBR PRA invoice ERP",
       "AI ERP software",
-      "mobile ERP Android app",
+      "ERP Supervision system",
       "best cloud ERP Pakistan",
       "business automation software Pakistan",
       "enterprise resource planning Pakistan",
@@ -59,12 +63,12 @@ export const pageSeo = {
       {
         question: "What is Hybrid Customized ERP by ALI AKBAR SOFTECH?",
         answer:
-          "It is a cloud-ready SaaS-style ERP platform customized for Pakistani factories and businesses — covering procurement, production, inventory, dispatch, HRM, accounting, FBR/PRA invoicing, dashboards, and mobile supervision.",
+          "It is a cloud-ready SaaS-style ERP platform customized for Pakistani factories and businesses — covering procurement, production, inventory, dispatch, HRM, accounting, FBR/PRA invoicing, dashboards, and Supervision system.",
       },
       {
         question: "Is your ERP available as cloud SaaS?",
         answer:
-          "Yes. Our Hybrid Customized ERP is cloud-based with secure web access, realtime dashboards, and Android mobile supervision so teams can work from office, plant, or remote locations.",
+          "Yes. Our Hybrid Customized ERP is cloud-based with secure web access, realtime dashboards, and a Supervision system so teams can work from office, plant, or remote locations.",
       },
       {
         question: "Does the ERP support FBR and PRA invoices?",

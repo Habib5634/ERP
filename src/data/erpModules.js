@@ -51,7 +51,7 @@ export const productPackages = [
     name: "Elite",
     tagline: "Complete platform",
     description:
-      "Maximum capability — AI tools, mobile supervision, and advanced plant-floor integrations.",
+      "Maximum capability — AI tools, Supervision system, and advanced plant-floor integrations.",
     accent: "elite",
     features: [
       "Everything in Pro",

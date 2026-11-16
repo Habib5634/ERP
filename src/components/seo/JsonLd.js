@@ -7,14 +7,30 @@ export default function JsonLd({ extra = [] }) {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: company.legalName,
-    alternateName: ["A.A.S", "Ali Akbar Softech", "Ali Akbar Software"],
+    legalName: company.legalName,
+    alternateName: [
+      "Ali Akbar Softech",
+      "ALI AKBAR SOFTECH",
+      "A.A.S",
+      "Ali Akbar Softech Pakistan",
+      "Ali Akbar Software",
+    ],
     url: SITE_URL,
-    logo: `${SITE_URL}/logo-mark.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/logo-mark.png`,
+    },
+    image: `${SITE_URL}/logo-mark.png`,
     description: company.description,
+    slogan: company.tagline,
     telephone: company.phone,
     email: company.email,
-    areaServed: "PK",
+    areaServed: {
+      "@type": "Country",
+      name: "Pakistan",
+    },
     founder: {
       "@type": "Person",
       name: ceo.name,
@@ -31,6 +47,18 @@ export default function JsonLd({ extra = [] }) {
           },
         }
       : {}),
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: company.legalName,
+    alternateName: ["Ali Akbar Softech", "A.A.S"],
+    url: SITE_URL,
+    description: company.description,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en-PK",
   };
 
   const reviewNodes = reviews.map((review) => ({
@@ -79,7 +107,7 @@ export default function JsonLd({ extra = [] }) {
       name: company.legalName,
     },
     description:
-      "Hybrid customized cloud SaaS ERP software for factories and businesses in Pakistan — secure, FBR/PRA ready, with AI and mobile supervision.",
+      "Hybrid customized cloud SaaS ERP software for factories and businesses in Pakistan — secure, FBR/PRA ready, with AI and Supervision system.",
   };
 
   const personCeo = {
@@ -110,6 +138,7 @@ export default function JsonLd({ extra = [] }) {
 
   const payload = [
     organization,
+    website,
     software,
     personCeo,
     personTax,

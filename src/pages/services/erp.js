@@ -55,7 +55,7 @@ export default function ErpServicePage() {
               <SectionHeading
                 eyebrow="Latest technology"
                 title="Built for 2026 workflows"
-                description="AI, realtime alerts, responsive web access, smart themes, and Android supervision."
+                description="AI, realtime alerts, responsive web access, smart themes, and Supervision system."
               />
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -149,7 +149,7 @@ export default function ErpServicePage() {
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/85">
                 CFMDI represents earlier ERP generations from our journey. Today’s Hybrid
                 Customized ERP carries that factory-floor DNA forward — with cloud SaaS
-                access, AI assistance, tax compliance, and modern mobile supervision.
+                access, AI assistance, tax compliance, and Supervision system.
               </p>
             </div>
           </Reveal>

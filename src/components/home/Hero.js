@@ -1,10 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Cloud, ShieldCheck, Clock3 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { company } from "@/data/company";
+
+const erpHighlights = [
+  "AI assistant & realtime dashboards",
+  "FBR & PRA invoicing",
+  "Dual accounting & face attendance",
+  "Supervision system (web + mobile)",
+];
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -23,24 +29,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Image
-            src="/logo-mark.png"
-            alt={`${company.legalName} logo`}
-            width={320}
-            height={320}
-            quality={100}
-            className="h-36 w-auto object-contain sm:h-44 md:h-52"
-            priority
-          />
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <p className="display-font text-4xl leading-none tracking-tight text-primary-deep sm:text-5xl md:text-6xl">
             {company.legalName}
           </p>
-          <h1 className="mt-6 max-w-xl text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            Customized ERP & SaaS software that helps you manage, grow, and succeed.
+          <h1 className="mt-6 max-w-xl text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl">
+            {company.slogan}
           </h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-            Cloud ERP and business software for factories, farms, and trading in Pakistan —
-            secure, FBR-ready, and shaped around how your operations actually run.
+            {company.intro} Our focus is factories, farms, and Trading System software —
+            reliable, efficient, and built around how your business actually runs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/services/erp" className="btn-primary">
@@ -70,36 +67,28 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="surface relative overflow-hidden rounded-[1.75rem] p-6 shadow-[0_30px_80px_-40px_rgba(20,82,40,0.45)] sm:p-8">
-            <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-primary via-brand-yellow to-support" />
+          <div className="relative border-l-2 border-primary/25 pl-6 sm:pl-8">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-              Latest technology
+              Flagship platform
             </p>
-            <p className="display-font mt-3 text-3xl text-primary-deep">
+            <p className="display-font mt-3 text-3xl text-primary-deep sm:text-4xl">
               Hybrid Customized ERP
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              AI assistant, realtime dashboards, FBR & PRA invoices, dual accounting,
-              face attendance, and Android supervision — one platform.
+            <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+              One cloud platform for operations, accounting, tax compliance, and
+              Supervision system — built for factories and growing businesses in Pakistan.
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-3">
-              {[
-                ["Modules", "12+", "bg-primary/8"],
-                ["Access", "Web + App", "bg-support/10"],
-                ["Tax", "FBR / PRA", "bg-accent/10"],
-                ["Uptime", "24/7", "bg-brand-yellow/20"],
-              ].map(([label, value, tone]) => (
-                <div
-                  key={label}
-                  className={`rounded-xl border border-line ${tone} px-4 py-3`}
-                >
-                  <p className="text-xs uppercase tracking-wider text-muted">{label}</p>
-                  <p className="mt-1 text-lg font-semibold text-primary-deep">{value}</p>
-                </div>
+            <ul className="mt-6 space-y-3">
+              {erpHighlights.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-foreground sm:text-base">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
               ))}
-            </div>
-            <p className="mt-6 text-sm text-muted">
-              Led by <span className="font-semibold text-foreground">Usman Akbar</span>
+            </ul>
+            <p className="mt-8 text-sm text-muted">
+              Led by{" "}
+              <span className="font-semibold text-foreground">Usman Akbar</span>
             </p>
           </div>
         </motion.div>

@@ -35,7 +35,7 @@ export default function ErpJsonLd() {
       "HRM and payroll",
       "FBR and PRA invoices",
       "AI Assistant",
-      "Android mobile supervision",
+      "Supervision system",
     ],
   };
 

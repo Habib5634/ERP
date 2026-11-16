@@ -35,27 +35,29 @@ export default function CompanyIntro() {
             <SectionHeading
               eyebrow="Our products"
               title="Built around customer requirements"
-              description="Trading, manufacturing, HR, and specialized industry systems — including egg trading under our Trading System."
+              description="Trading System, manufacturing, and HR — built around customer requirements."
             />
           </Reveal>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {productLines.map((group, index) => (
-              <Reveal key={group.title} delay={index * 0.05}>
-                <article className="surface h-full rounded-2xl p-6">
-                  <h3 className="text-lg font-semibold text-primary-deep">
-                    {group.title}
-                  </h3>
-                  <ul className="mt-4 space-y-2 text-sm text-muted">
-                    {group.items.map((item) => (
-                      <li key={item} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
+            {productLines
+              .filter((group) => group.title !== "Specialized industries")
+              .map((group, index) => (
+                <Reveal key={group.title} delay={index * 0.05}>
+                  <article className="surface h-full rounded-2xl p-6">
+                    <h3 className="text-lg font-semibold text-primary-deep">
+                      {group.title}
+                    </h3>
+                    <ul className="mt-4 space-y-2 text-sm text-muted">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </Reveal>
+              ))}
           </div>
           <Reveal delay={0.15}>
             <Link href="/about" className="btn-secondary mt-8">

@@ -32,7 +32,7 @@ export default function ErpHighlight() {
                 </h2>
                 <p className="relative mt-4 max-w-md text-sm leading-relaxed text-white/85">
                   Factory to finance in one system. Evolved from earlier CFMDI ERP
-                  generations into a modern hybrid platform with AI, mobile supervision,
+                  generations into a modern hybrid platform with AI, Supervision system,
                   and Pakistan tax readiness.
                 </p>
                 <Link

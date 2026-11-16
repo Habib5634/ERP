@@ -1,5 +1,5 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://aliakbarsoftech.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://aliakbarsoftech.online";
 
 export const company = {
   brandShort: "A.A.S",
@@ -39,7 +39,7 @@ export const productLines = [
       "Stock inventory control",
       "Financial accounting",
       "Sales tax & related modules",
-      "Egg trading workflows",
+      "Trading workflows",
     ],
   },
   {
